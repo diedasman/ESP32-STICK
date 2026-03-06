@@ -84,16 +84,18 @@ Attach the back cover and fasten it using screws or snap it into place.
 ## 📁 Repository Structure
 ```
 ├── stl/
-│ ├── front_case.stl
-│ └── back_case.stl
+│ ├── EnclosureBottom.stl
+│ └── EnclosureTop.stl
 ├── images/
 │ ├── assembled.jpg
 │ ├── exploded.jpg
 │ ├── step1_parts.jpg
 │ └── step2_board.jpg
-├── cad/
-| ├── ESP32.step
-│ └── enclosure.step
+├── step/
+| ├── esp32-s3-lcd-1_47_asm.step
+| ├── ESP-STICK-ASSEMBLY.step
+| ├── EnclosureBottom.step
+│ └── EnclosureTop.step
 └── README.md
 ```
 ---
