@@ -124,6 +124,4 @@ appreciated but not required.
 
 ## Contributions
 
-Contributions, improvements, and remixes are welcome. If you create a variant
-such as a battery version, wall mount, or revised fastener layout, feel free to
-open a pull request or share it.
+Contributions, improvements, and remixes are welcome.
