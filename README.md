@@ -10,13 +10,6 @@ device.
 Product reference:
 https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 
-## Preview
-
-![ESP-STICK assembled 3D view](hardware/espstick.png)
-
-![ESP-STICK exploded assembly 3D view](hardware/assembly-exploded.png)
-
-![ESP-STICK bottom exploded assembly 3D view](hardware/assembly-exploded-bottom.png)
 
 ## Project Status
 
