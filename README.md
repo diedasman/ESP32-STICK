@@ -10,6 +10,14 @@ device.
 Product reference:
 https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 
+## Preview
+
+![ESP-STICK assembled 3D view](hardware/espstick.png)
+
+![ESP-STICK exploded assembly 3D view](hardware/assembly-exploded.png)
+
+![ESP-STICK bottom exploded assembly 3D view](hardware/assembly-exploded-bottom.png)
+
 ## Project Status
 
 - Hardware: enclosure STEP files are organized under `hardware/step/`.
@@ -38,15 +46,16 @@ https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 
 ```text
 .
-├── assets/
-│   ├── assembly-exploded.png
-│   └── espstick.png
 ├── firmware/
 │   ├── README.md
 │   └── SerialSIM/
 │       ├── DeviceDetails.md
 │       └── SerialSIM.ino
 ├── hardware/
+│   ├── README.md
+│   ├── assembly-exploded-bottom.png
+│   ├── assembly-exploded.png
+│   ├── espstick.png
 │   ├── step/
 │   │   ├── ESP-STICK-ASSEMBLY.step
 │   │   ├── EnclosureBottom.step
