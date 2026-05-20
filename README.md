@@ -38,6 +38,9 @@ https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 
 ```text
 .
+├── assets/
+│   ├── assembly-exploded.png
+│   └── espstick.png
 ├── firmware/
 │   ├── README.md
 │   └── SerialSIM/
