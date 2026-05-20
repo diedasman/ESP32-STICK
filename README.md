@@ -1,143 +1,124 @@
-# 📦 ESP32-S3-LCD-1.47 Enclosure (ESP-STICK)
+# ESP32-S3-LCD-1.47 Enclosure (ESP-STICK)
 
-A compact 3D-printable enclosure designed specifically for the **Waveshare ESP32-S3-LCD-1.47** development board.
+A compact enclosure and firmware workspace for the Waveshare
+ESP32-S3-LCD-1.47 development board.
 
-This enclosure provides:
-- Secure mounting for the PCB
-- Easy access to USB, buttons, and screen
-- A clean, minimal form factor suitable for desk or handheld use
+The project currently contains the mechanical STEP model for the ESP-STICK
+enclosure, reference resources, and a baseline firmware sketch for the SerialSIM
+device.
 
-🔗 Product reference:  
+Product reference:
 https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 
----
+## Project Status
 
-## 📸 Preview
+- Hardware: enclosure STEP files are organized under `hardware/step/`.
+- Printable STL exports are organized under `hardware/stl/`.
+- Firmware: the current Arduino sketch is under `firmware/SerialSIM/`.
 
-![Assembled enclosure](images/assembled.jpg)  
-![Exploded view](images/exploded.jpg)
+## Features
 
-> See the assembly section below for step-by-step photos.
+- Designed around the Waveshare ESP32-S3-LCD-1.47 board.
+- Two-part enclosure model with top and bottom shells.
+- Assembly STEP file for reviewing the full device.
+- Firmware workspace for serial, TCP, and protocol-simulation work.
+- Device notes for the SerialSIM target.
 
----
+## Bill of Materials
 
-## 🧩 Features
+| Item | Qty | Part / File | Notes |
+|---|---:|---|---|
+| ESP32-S3-LCD-1.47 development board | 1 | [Waveshare ESP32-S3-LCD-1.47](https://www.waveshare.com/product/esp32-s3-lcd-1.47.htm) | Target board for the enclosure and firmware. |
+| Enclosure top | 1 | [ESP-STICK-ENCLOSURE-TOP.stl](hardware/stl/ESP-STICK-ENCLOSURE-TOP.stl) | Printable top shell. |
+| Enclosure bottom | 1 | [ESP-STICK-ENCLOSURE-BOTTOM.stl](hardware/stl/ESP-STICK-ENCLOSURE-BOTTOM.stl) | Printable bottom shell. |
+| M2x5mm screw | 4 | [M2x5-round-flat-phillips-screw.step](hardware/step/M2x5-round-flat-phillips-screw.step) | Confirm exact quantity and fit against the latest enclosure revision. |
+| M1x6mm screw | 4 | [M1x0.2L6_DIN965A.step](hardware/step/M1x0.2L6_DIN965A.step) | Confirm exact quantity and fit against the latest enclosure revision. |
 
-- Designed specifically for **ESP32-S3-LCD-1.47**
-- Snap-fit or screw-based assembly (depending on version)
-- No supports required for most printers
-- Optimized for FDM printing
-- Compact and lightweight
+## Repository Structure
 
----
-
-## 🖨️ Printing Recommendations
-
-| Setting           | Recommendation |
-|-------------------|----------------|
-| Material          | PLA / PETG    |
-| Layer height      | 0.2 mm        |
-| Infill            | 15–25%        |
-| Perimeters        | 3              |
-| Supports          | None           |
-| Print orientation | As provided    |
-
-> PETG is recommended if the enclosure will be exposed to higher temperatures.
-
----
-
-## 🔩 Assembly Instructions
-
-### Step 1 – Print the Parts
-Print all STL files located in the `/stl` folder.
-
-![Step 1](images/step1_parts.jpg)
-
----
-
-### Step 2 – Insert the ESP32 Board
-Place the ESP32-S3-LCD-1.47 into the front shell:
-- Ensure the display sits flush with the front opening
-- Align the USB connector with the cutout
-
-![Step 2](images/step2_board.jpg)
-
----
-
-### Step 3 – Secure the Board
-Secure the PCB using:
-- M2 screws *(length: XX mm)*  
-  **or**
-- Integrated snap-fit features (if applicable)
-
-![Step 3](images/step3_screws.jpg)
-
----
-
-### Step 4 – Close the Enclosure
-Attach the back cover and fasten it using screws or snap it into place.
-
-![Step 4](images/step4_close.jpg)
-
----
-
-## 📁 Repository Structure
-```
-├── stl/
-│ ├── EnclosureBottom.stl
-│ └── EnclosureTop.stl
-├── images/
-│ ├── assembled.jpg
-│ ├── exploded.jpg
-│ ├── step1_parts.jpg
-│ └── step2_board.jpg
-├── step/
-| ├── esp32-s3-lcd-1_47_asm.step
-| ├── ESP-STICK-ASSEMBLY.step
-| ├── EnclosureBottom.step
-│ └── EnclosureTop.step
+```text
+.
+├── firmware/
+│   ├── README.md
+│   └── SerialSIM/
+│       ├── DeviceDetails.md
+│       └── SerialSIM.ino
+├── hardware/
+│   ├── step/
+│   │   ├── ESP-STICK-ASSEMBLY.step
+│   │   ├── EnclosureBottom.step
+│   │   ├── EnclosureTop.step
+│   │   ├── M1x0.2L6_DIN965A.step
+│   │   ├── M2x5-round-flat-phillips-screw.step
+│   │   └── esp32-s3-lcd-1_47_asm.stp
+│   └── stl/
+│       ├── ESP-STICK-ENCLOSURE-BOTTOM.stl
+│       └── ESP-STICK-ENCLOSURE-TOP.stl
 └── README.md
 ```
----
 
-## 🛠️ CAD Files
+## Hardware
 
-- Native CAD files are located in `/cad`
-- Exported STL files are located in `/stl`
+Mechanical source files are stored in `hardware/step/`, and printable STL
+exports are stored in `hardware/stl/`.
 
-Designed using **Onshape / Fusion 360 / FreeCAD**  
-*(update this section to match your toolchain)*
+- `ESP-STICK-ASSEMBLY.step` is the full assembly.
+- `EnclosureTop.step` and `EnclosureBottom.step` are the enclosure shells.
+- `ESP-STICK-ENCLOSURE-TOP.stl` and `ESP-STICK-ENCLOSURE-BOTTOM.stl` are the
+  current printable exports.
+- `esp32-s3-lcd-1_47_asm.stp` is the board reference model.
+- Screw STEP files are included for assembly and clearance checks.
 
----
+Export to other printer-ready formats from the STEP models as needed. Keep those
+exports under a dedicated hardware subfolder such as `hardware/stl/` or
+`hardware/3mf/`.
 
-## ⚠️ Notes & Limitations
+## Printing Recommendations
 
-- Designed **only** for the Waveshare ESP32-S3-LCD-1.47
-- Not compatible with other ESP32-S3 LCD boards
-- Tolerances are optimized for common FDM printers  
-  Minor sanding or fit adjustment may be required
+For the cleanest appearance, resin printing is the preferred process for this
+enclosure. SLA/MSLA resin prints can produce sharper edges, smoother surfaces,
+and less visible layer texture than FDM, which should suit the small screen
+opening and compact handheld form factor well.
 
----
+Use a tough, ABS-like, or engineering resin rather than a standard brittle resin
+if the enclosure will be handled often, screwed together repeatedly, or carried
+loose in a bag. FDM in PETG or ABS is still a good option for rough prototypes,
+heat exposure, or parts where impact resistance matters more than surface finish.
 
-## 📜 License
+Resin prints should be washed and post-cured according to the resin
+manufacturer's guidance. Avoid over-curing, since some resins can become more
+brittle with excessive UV exposure.
 
-This project is released under the **MIT License**.
+## Firmware
 
-You are free to:
-- Use
-- Modify
-- Print
-- Sell printed versions
+Firmware lives in `firmware/`.
+The current sketch is:
 
-Attribution is appreciated but not required.
+```text
+firmware/SerialSIM/SerialSIM.ino
+```
 
----
+The SerialSIM notes describe the target device, current scope, and intended
+future behavior. See `firmware/SerialSIM/DeviceDetails.md`.
 
-## 🤝 Contributions
+## Notes and Limitations
 
-Contributions, improvements, and remixes are welcome.  
-If you create a variant (battery version, wall mount, etc.), feel free to open a pull request or share it.
+- Designed for the Waveshare ESP32-S3-LCD-1.47 board.
+- Fit has not been documented for other ESP32-S3 LCD boards.
+- Current STL exports are tracked, but slicer settings and orientation should be
+  reviewed before printing.
+- Screw quantity and final fastener specification should be verified against the
+  latest assembly.
 
----
+## License
 
-Enjoy building! 🚀
+This project is released under the MIT License.
+
+You are free to use, modify, print, and sell printed versions. Attribution is
+appreciated but not required.
+
+## Contributions
+
+Contributions, improvements, and remixes are welcome. If you create a variant
+such as a battery version, wall mount, or revised fastener layout, feel free to
+open a pull request or share it.
