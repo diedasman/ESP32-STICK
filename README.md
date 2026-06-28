@@ -32,8 +32,6 @@ https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 | ESP32-S3-LCD-1.47 development board | 1 | [Waveshare ESP32-S3-LCD-1.47](https://www.waveshare.com/product/esp32-s3-lcd-1.47.htm) | Target board for the enclosure and firmware. |
 | Enclosure top | 1 | [ESP-STICK-ENCLOSURE-TOP.stl](hardware/stl/ESP-STICK-ENCLOSURE-TOP.stl) | Printable top shell. |
 | Enclosure bottom | 1 | [ESP-STICK-ENCLOSURE-BOTTOM.stl](hardware/stl/ESP-STICK-ENCLOSURE-BOTTOM.stl) | Printable bottom shell. |
-| M2x5mm screw | 4 | [M2x5-round-flat-phillips-screw.step](hardware/step/M2x5-round-flat-phillips-screw.step) | Confirm exact quantity and fit against the latest enclosure revision. |
-| M1x6mm screw | 4 | [M1x0.2L6_DIN965A.step](hardware/step/M1x0.2L6_DIN965A.step) | Confirm exact quantity and fit against the latest enclosure revision. |
 
 ## Repository Structure
 
@@ -46,16 +44,13 @@ https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 │       └── SerialSIM.ino
 ├── hardware/
 │   ├── README.md
-│   ├── assembly-exploded-bottom.png
-│   ├── assembly-exploded.png
-│   ├── espstick.png
+│   ├── assy-bottom.png
+│   ├── assy-exploded.png
+│   ├── assy-top.png
 │   ├── step/
 │   │   ├── ESP-STICK-ASSEMBLY.step
-│   │   ├── EnclosureBottom.step
-│   │   ├── EnclosureTop.step
-│   │   ├── M1x0.2L6_DIN965A.step
-│   │   ├── M2x5-round-flat-phillips-screw.step
-│   │   └── esp32-s3-lcd-1_47_asm.stp
+│   │   ├── ESP-STICK-ENCLOSURE-BOTTOM.step
+│   │   └── ESP-STICK-ENCLOSURE-TOP.step
 │   └── stl/
 │       ├── ESP-STICK-ENCLOSURE-BOTTOM.stl
 │       └── ESP-STICK-ENCLOSURE-TOP.stl
@@ -68,11 +63,10 @@ Mechanical source files are stored in `hardware/step/`, and printable STL
 exports are stored in `hardware/stl/`.
 
 - `ESP-STICK-ASSEMBLY.step` is the full assembly.
-- `EnclosureTop.step` and `EnclosureBottom.step` are the enclosure shells.
+- `ESP-STICK-ENCLOSURE-TOP.step` and `ESP-STICK-ENCLOSURE-BOTTOM.step` are the
+  enclosure shells.
 - `ESP-STICK-ENCLOSURE-TOP.stl` and `ESP-STICK-ENCLOSURE-BOTTOM.stl` are the
   current printable exports.
-- `esp32-s3-lcd-1_47_asm.stp` is the board reference model.
-- Screw STEP files are included for assembly and clearance checks.
 
 Export to other printer-ready formats from the STEP models as needed. Keep those
 exports under a dedicated hardware subfolder such as `hardware/stl/` or
@@ -112,8 +106,6 @@ future behavior. See `firmware/SerialSIM/DeviceDetails.md`.
 - Fit has not been documented for other ESP32-S3 LCD boards.
 - Current STL exports are tracked, but slicer settings and orientation should be
   reviewed before printing.
-- Screw quantity and final fastener specification should be verified against the
-  latest assembly.
 
 ## License
 
