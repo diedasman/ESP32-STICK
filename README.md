@@ -32,6 +32,8 @@ https://www.waveshare.com/wiki/ESP32-S3-LCD-1.47
 | ESP32-S3-LCD-1.47 development board | 1 | [Waveshare ESP32-S3-LCD-1.47](https://www.waveshare.com/product/esp32-s3-lcd-1.47.htm) | Target board for the enclosure and firmware. |
 | Enclosure top | 1 | [ESP-STICK-ENCLOSURE-TOP.stl](hardware/stl/ESP-STICK-ENCLOSURE-TOP.stl) | Printable top shell. |
 | Enclosure bottom | 1 | [ESP-STICK-ENCLOSURE-BOTTOM.stl](hardware/stl/ESP-STICK-ENCLOSURE-BOTTOM.stl) | Printable bottom shell. |
+| EDDM-M2-L4 screw | 4 | [JLCMC EDDM-M2-L4](https://jlcmc.com/product/s/E02/EDDM/phillips-ultra-thin-head-screw?k=EDDM-M2-L4&productModelNumber=EDDM-M2-L4) | Mounting hardware for the enclosure assembly. |
+| ELSV-S1W-M1.4-L8-S2.5 screw | 4 | [JLCMC ELSV-S1W-M1.4-L8-S2.5](https://jlcmc.com/product/s/E02/ELSV/cross-recessed-precision-electronic-mini-screw?k=ELSV-S1W-M1.4-L8-S2.5&productModelNumber=ELSV-S1W-M1.4-L8-S2.5) | Mounting hardware for the enclosure assembly. |
 
 ## Repository Structure
 
@@ -72,6 +74,9 @@ Export to other printer-ready formats from the STEP models as needed. Keep those
 exports under a dedicated hardware subfolder such as `hardware/stl/` or
 `hardware/3mf/`.
 
+Current STL exports are tracked, but slicer settings and orientation should be
+reviewed before printing.
+
 ## Printing Recommendations
 
 For the cleanest appearance, resin printing is the preferred process for this
@@ -99,20 +104,6 @@ firmware/SerialSIM/SerialSIM.ino
 
 The SerialSIM notes describe the target device, current scope, and intended
 future behavior. See `firmware/SerialSIM/DeviceDetails.md`.
-
-## Notes and Limitations
-
-- Designed for the Waveshare ESP32-S3-LCD-1.47 board.
-- Fit has not been documented for other ESP32-S3 LCD boards.
-- Current STL exports are tracked, but slicer settings and orientation should be
-  reviewed before printing.
-
-## License
-
-This project is released under the MIT License.
-
-You are free to use, modify, print, and sell printed versions. Attribution is
-appreciated but not required.
 
 ## Contributions
 
